@@ -124,6 +124,7 @@ a:hover{
 .sidebar{
     position: fixed;
     transform: translateX(-30rem);
+    transition: ease-out .6s;
     width: 20rem;
     background: #f0f0f0;
     border-radius: 5px;
@@ -132,6 +133,7 @@ a:hover{
 
 .sidebar.open{
     transform: translateX(0);
+    transition: ease-in .6s;
 }
 
 .sidebar-close{
