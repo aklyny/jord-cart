@@ -125,10 +125,24 @@ a:hover{
     position: fixed;
     transform: translateX(-30rem);
     transition: ease-out .6s;
-    width: 22rem;
-    background: #f0f0f0;
+    width: 20rem;
+    background: #2193b0;  /* fallback for old browsers */
     border-radius: 5px;
     height: 100vh;
+    
+}
+.sidebar li{
+    list-style-type: none;
+    font-family: monospace;
+    font-size: 2rem;
+    padding: .5rem;
+    font-weight: 200;
+}
+.sidebar a{
+    color:#ffffff;
+}
+.sidebar a:hover{
+    color:orange;
 }
 
 .sidebar.open{
@@ -148,4 +162,7 @@ a:hover{
     position: absolute;
     right: .5rem;
     top: 1.5rem;
+}
+.sidebar button:hover{
+    background: orange;
 }
