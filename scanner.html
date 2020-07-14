@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div>
+       <img src="./img/scan.jpeg" alt="scanner" style="height: 120x; width: 20%; margin: 0 auto; display: flex;">
+       <main class="main">
+        <div class="content">
+            <ul class="products">
+                <li>
+                    <div class="product">
+                        <img src="./img/1.jpg" alt="cookie" class="product-image">
+                        <div class="product-name">
+                            <a href="#">BourBon</a>
+                        </div>
+                        <div class="product-brand">Nestle</div>
+                        <div class="price">₹60</div>
+                        <div class="product-rating">
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+                                <p>Value: <span id="demo"></span></p>
+                                <p>Total:<span id="total"></span></p>
+                              </div>
+                              <button><a href="payment.html">Payment</a></button>
+                        </div>
+                      </div> 
+                </li>
+            </ul>
+        </div>
+    </main>
+    </div>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        var total = document.getElementById("total")
+        output.innerHTML = slider.value;
+        total.innerHTML = slider.value;
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+          total.innerHTML = this.value * 60;
+          }
+        //   total.oninput = function(){
+        //     total.innerHTML = this.value * 60;
+        //   }
+        </script>   
+</body>
+</html>
